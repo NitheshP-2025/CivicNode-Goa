@@ -1,0 +1,26 @@
+# All tunable numbers live here. These are STARTING VALUES:
+# tune them on your sample documents and golden claims, then report the results.
+quality:
+  min_blur_score: 80.0        # variance of Laplacian; lower = blurrier
+  min_width: 800
+  min_height: 800
+  min_brightness: 60
+  max_brightness: 230
+extraction:
+  key_fields: [owner, survey, area_ha]
+  min_field_confidence: 0.80
+  ocr_default_confidence: 0.50
+  single_source_factor: 0.70   # only OCR found the value
+  llm_only_confidence: 0.55    # only the vision model found the value
+  disagree_cap: 0.40           # OCR and vision model disagree
+  invalid_factor: 0.50         # value fails format validation
+  agree_area_tolerance_pct: 1.0
+matching:
+  name_match_score: 90         # fuzzy score out of 100
+  name_possible_score: 75
+  area_tolerance_pct: 5.0      # within this = match, within 2x = possible
+flood:
+  green_requires: [HIGH, MEDIUM]
+  red_if_not_indicated_at: [HIGH]
+recommend:
+  max_reasons: 6

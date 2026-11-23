@@ -1,0 +1,231 @@
+[
+  {
+    "_note": "EXAMPLE numbers and rule only. Replace with Jos's golden claims.",
+    "name": "all checks pass",
+    "expected_lane": "GREEN",
+    "bundle": {
+      "extraction": {
+        "document_id": "d1",
+        "quality": {
+          "ok": true,
+          "blur_score": 150.0,
+          "width": 1600,
+          "height": 2200,
+          "brightness": 180.0
+        },
+        "is_land_record": true,
+        "fields": [
+          {
+            "name": "owner",
+            "value": "Ramesh P",
+            "confidence": 0.96
+          },
+          {
+            "name": "survey",
+            "value": "45/2",
+            "confidence": 0.98
+          },
+          {
+            "name": "area_ha",
+            "value": 1.2,
+            "confidence": 0.91
+          },
+          {
+            "name": "village",
+            "value": "Ponda",
+            "confidence": 0.9
+          },
+          {
+            "name": "taluka",
+            "value": "Ponda",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "matches": [
+        {
+          "field": "owner",
+          "status": "match"
+        },
+        {
+          "field": "survey",
+          "status": "match"
+        },
+        {
+          "field": "area_ha",
+          "status": "match"
+        }
+      ],
+      "rule": {
+        "status": "eligible",
+        "rule_id": "EXAMPLE_RULE_V1",
+        "clause": "example clause"
+      },
+      "flood": {
+        "indicated": true,
+        "confidence": "HIGH",
+        "image_date": "2026-07-14"
+      },
+      "duplicate": {
+        "found": false
+      },
+      "calculation": {
+        "total": "24000.00",
+        "formula": "area x rate"
+      },
+      "service_errors": []
+    }
+  },
+  {
+    "name": "no satellite evidence",
+    "expected_lane": "AMBER",
+    "bundle": {
+      "extraction": {
+        "document_id": "d1",
+        "quality": {
+          "ok": true,
+          "blur_score": 150.0,
+          "width": 1600,
+          "height": 2200,
+          "brightness": 180.0
+        },
+        "is_land_record": true,
+        "fields": [
+          {
+            "name": "owner",
+            "value": "Ramesh P",
+            "confidence": 0.96
+          },
+          {
+            "name": "survey",
+            "value": "45/2",
+            "confidence": 0.98
+          },
+          {
+            "name": "area_ha",
+            "value": 1.2,
+            "confidence": 0.91
+          },
+          {
+            "name": "village",
+            "value": "Ponda",
+            "confidence": 0.9
+          },
+          {
+            "name": "taluka",
+            "value": "Ponda",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "matches": [
+        {
+          "field": "owner",
+          "status": "match"
+        },
+        {
+          "field": "survey",
+          "status": "match"
+        },
+        {
+          "field": "area_ha",
+          "status": "match"
+        }
+      ],
+      "rule": {
+        "status": "eligible",
+        "rule_id": "EXAMPLE_RULE_V1",
+        "clause": "example clause"
+      },
+      "flood": {
+        "indicated": null,
+        "confidence": "UNAVAILABLE"
+      },
+      "duplicate": {
+        "found": false
+      },
+      "calculation": {
+        "total": "24000.00",
+        "formula": "area x rate"
+      },
+      "service_errors": []
+    }
+  },
+  {
+    "name": "duplicate claim",
+    "expected_lane": "RED",
+    "bundle": {
+      "extraction": {
+        "document_id": "d1",
+        "quality": {
+          "ok": true,
+          "blur_score": 150.0,
+          "width": 1600,
+          "height": 2200,
+          "brightness": 180.0
+        },
+        "is_land_record": true,
+        "fields": [
+          {
+            "name": "owner",
+            "value": "Ramesh P",
+            "confidence": 0.96
+          },
+          {
+            "name": "survey",
+            "value": "45/2",
+            "confidence": 0.98
+          },
+          {
+            "name": "area_ha",
+            "value": 1.2,
+            "confidence": 0.91
+          },
+          {
+            "name": "village",
+            "value": "Ponda",
+            "confidence": 0.9
+          },
+          {
+            "name": "taluka",
+            "value": "Ponda",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "matches": [
+        {
+          "field": "owner",
+          "status": "match"
+        },
+        {
+          "field": "survey",
+          "status": "match"
+        },
+        {
+          "field": "area_ha",
+          "status": "match"
+        }
+      ],
+      "rule": {
+        "status": "eligible",
+        "rule_id": "EXAMPLE_RULE_V1",
+        "clause": "example clause"
+      },
+      "flood": {
+        "indicated": true,
+        "confidence": "HIGH",
+        "image_date": "2026-07-14"
+      },
+      "duplicate": {
+        "found": true,
+        "claim_id": "GOA-2026-00042"
+      },
+      "calculation": {
+        "total": "24000.00",
+        "formula": "area x rate"
+      },
+      "service_errors": []
+    }
+  }
+]
