@@ -1,0 +1,20 @@
+
+scheme: flood_relief
+version: v1
+status: demo
+
+effective_from: "2026-01-01"
+effective_to: null
+
+description: >
+  Synthetic demonstration rule pack.
+  Not an official Government of Goa compensation policy.
+
+source_documents: []
+
+calculation:
+  method: area_times_rate_per_hectare
+  rate_per_hectare: "1111.11"
+  rate_status: demo
+
+rules: []

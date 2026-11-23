@@ -1,0 +1,24 @@
+
+scheme: land_acquisition
+version: v1
+status: demo
+
+effective_from: "2026-01-01"
+effective_to: null
+
+description: >
+  Synthetic demonstration rule pack for land acquisition.
+  Not an official Government of Goa compensation policy.
+
+source_documents: []
+
+calculation:
+  method: illustrative_land_acquisition
+
+  solatium_rate: "0.10"
+  interest_rate_annual: "0.05"
+  interest_basis_days: 365
+
+  rate_status: demo
+
+rules: []
